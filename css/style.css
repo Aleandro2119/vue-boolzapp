@@ -50,3 +50,16 @@ p,a{
 .contact{
     overflow-y: scroll;
 }
+
+/*Header contact*/
+#user-header{
+    background-color: #EAEAEA;
+    padding: 8px;
+}
+.access{
+    font-size: 14px;
+}
+
+.img-form{
+    width: 10%;
+}
