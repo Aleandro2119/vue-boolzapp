@@ -44,3 +44,9 @@ img{
 p,a{
     font-size: 14px;
 }
+
+/*Contact section*/
+
+.contact{
+    overflow-y: scroll;
+}
