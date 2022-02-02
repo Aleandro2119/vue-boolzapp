@@ -27,6 +27,7 @@ const root = new Vue({
     el: '#root',
     data: {
         newMessage: '',
+        usersearch: '',
         currentIndex: 0,
         user: {
             name: 'Aleandro Basilico',
@@ -145,18 +146,27 @@ const root = new Vue({
 
             setTimeout(() => {
                 this.setMessage('Ok', 'received');
-            }, 3000)
+            }, 1000)
         },
 
         setMessage(text, status) {
             const newsMess = {
                 text,
-                date: dayis().format('DD/MM/YYYY hh/mm/ss'),
+                date: dayjs().format('DD/MM/YYYY hh/mm/ss'),
                 status,
             }
             this.contacts[this.currentIndex].messages.push(newsMess);
 
-        }
+        },
+
+        // ! Trovare nomi nella barra di ricerca
+
+        searchFilter() {
+            const usersearch = this.usersearch;
+            this.contacts.forEach(contact => {
+                contact.visible = contact.name.toLowerCase().includes(usersearch);
+            });
+        },
 
     }
 })
