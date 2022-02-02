@@ -1,0 +1,7 @@
+/*General*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(0deg, rgb(219,219,211) 80%, rgb(0,150,136) 80%);
+    height: 100vh;
+}
