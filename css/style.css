@@ -63,3 +63,30 @@ p,a{
 .img-form{
     width: 10%;
 }
+
+/*Main chat*/
+.bg-chat{
+    background-image: url('../img/mine.jpg');
+    height: calc(100vh - 108px);
+    overflow-y: scroll;
+}
+
+.my-message{
+    background-color: #D5F9BA;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.message-form{
+    margin-top: 10px;
+}
+
+.contact-message{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+
