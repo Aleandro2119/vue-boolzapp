@@ -15,9 +15,12 @@ console.log('Vue ok', Vue);
 
 Vue.config.devtools = true;
 
+dayjs.extend(dayjs_plugin_customParseFormat);
+
 const root = new Vue({
     el: '#root',
     data: {
+        newMessage: '',
         currentIndex: 0,
         user: {
             name: 'Aleandro Basilico',
@@ -127,5 +130,27 @@ const root = new Vue({
         isContact(index) {
             this.currentIndex = index;
         },
-    },
+
+        sendMessage() {
+            if (!this.newMessage) return;
+
+            this.setMessage(this.newMessage, 'sent');
+            this.newMessage = '';
+
+            setTimeout(() => {
+                this.setMessage('Ok', 'received');
+            }, 3000)
+        },
+
+        setMessage(text, status) {
+            const newsMess = {
+                text,
+                date: dayis().format('DD/MM/YYYY hh/mm/ss'),
+                status,
+            }
+            this.contacts[this.currentIndex].messages.push(newsMess);
+
+        }
+
+    }
 })
