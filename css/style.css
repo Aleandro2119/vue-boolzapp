@@ -1,16 +1,19 @@
 /*General*/
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;;
     background: linear-gradient(0deg, rgb(219,219,211) 80%, rgb(0,150,136) 80%);
     height: 100vh;
 }
 
+.padding-icon{
+    padding: 0 15px;
+}
 /*Sidebar*/
 
 .bg-sidebar {
     background-color: #FBFBFB;
-    height: calc(100vh - 40px);
+    height: 100%;
     margin: 20px;
 }
 
@@ -19,12 +22,11 @@ img{
 }
 
 .fas,.far{
-    padding-right: 10px;
+    padding-right: 15px;
+    font-size: 20px;
+    color: #B1B1B1;
 }
 
-#user{
-    padding: 10px;
-}
 
 /*Notification section*/
 
@@ -56,12 +58,12 @@ p,a{
 }
 
 /*Header contact*/
-#user-header{
+#user-header,#user{
     background-color: #EAEAEA;
-    padding: 8px;
+    padding: 10px;
 }
 .access{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .img-form{
@@ -108,5 +110,4 @@ p,a{
 /*Footer chat*/
 .bg-footer{
     background-color: white;
-    
 }

@@ -31,7 +31,7 @@ const root = new Vue({
         currentIndex: 0,
         user: {
             name: 'Aleandro Basilico',
-            avatar: '_io',
+            avatar: '_8',
         },
 
         contacts: [
