@@ -18,6 +18,7 @@ Vue.config.devtools = true;
 const root = new Vue({
     el: '#root',
     data: {
+        currentIndex: 0,
         user: {
             name: 'Aleandro Basilico',
             avatar: '_io',
@@ -120,5 +121,11 @@ const root = new Vue({
                 ],
             },
         ]
-    }
+    },
+
+    methods: {
+        isContact(index) {
+            this.currentIndex = index;
+        },
+    },
 })
